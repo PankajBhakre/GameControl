@@ -1,3 +1,15 @@
-<div class="container">
-  <app-game-control></app-game-control>
+<nav class="navbar navbar-light bg-info justify-content-center">
+  <a class="navbar-brand">Game-Control</a>
+</nav>
+<div class="container" style="padding-top: 2px;">
+  <app-game-control (firedInterval)="seriseFunction($event)"></app-game-control>
+  <div class="row">
+    <div class="row-col-md-4">
+      <app-odd *ngFor="let odd of oddNumbers" [number]="odd"></app-odd>
+    </div> &nbsp;
+    
+    <div class="row-col-md-4">
+      <app-even *ngFor="let even of evenNumbers" [number]="even"></app-even>
+    </div> 
+  </div>
 </div>
